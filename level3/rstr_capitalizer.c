@@ -5,10 +5,6 @@ void    ft_rstr_capitalizer(char *str)
     int i;
 
     i = 0;
-    if (str[i] >= 'a' && str[i] <= 'z')
-        str[i] -= 32;
-    write(1, &str[i], 1);
-    i++;
     while (str[i])
     {
         if (str[i] >= 'A' && str[i] <= 'Z')
@@ -22,14 +18,16 @@ void    ft_rstr_capitalizer(char *str)
 
 int main(int ac, char **av)
 {
-    if (ac == 2)
+    if (ac == 1)
+        write (1, "\n", 1);
+    else
     {
         int i = 1;
         while (i < ac)
         {
             ft_rstr_capitalizer(av[i]);
+            write(1, "\n", 1);
             i++;
         }
     }
-    write(1, "\n", 1);
 }

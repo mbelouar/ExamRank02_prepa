@@ -1,18 +1,5 @@
 #include <stdio.h>
 
-int ft_len(int nb)
-{
-    int i = 0;
-    if (nb >= 0 && nb <=9)
-        return (1);
-    while (nb != 0)
-    {
-        i++;
-        nb /= 10;
-    }
-    return(i);
-}
-
 int     max(int *tab, unsigned int len)
 {
     if (!tab)

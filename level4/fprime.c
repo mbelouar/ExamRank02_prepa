@@ -23,5 +23,6 @@ int main(int ac, char **av)
             }
             i++;
         }
+        printf("\n");
     }
 }

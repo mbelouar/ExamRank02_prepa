@@ -1,20 +1,20 @@
 #include <unistd.h>
 
-int ft_len(char **str)
+void	ft_putnbr(int n)
 {
-    int i;
+	char digit;
 
-    i = 0;
-    while (str[i] != '\0')
-        i++;
-    return (i);
+	if (n >= 10)
+		ft_putnbr(n / 10);
+	digit = (n % 10) + '0';
+	write(1, &digit, 1);
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-    (void)ac;
-    char c = (ft_len(av) - 1) + 48;
-    write(1, &c, 1);
-    write(1, "\n", 1);
-    return 0;
+	(void)av;
+
+	ft_putnbr(ac - 1);
+	write(1, "\n", 1);
+	return (0);
 }

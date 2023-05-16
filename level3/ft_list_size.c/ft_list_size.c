@@ -1,6 +1,6 @@
-//#include "ft_list.h"
+#include "ft_list.h"
 #include <stdlib.h>
-#include <stdio.h>
+// #include <stdio.h>
 
 typedef struct    s_list
 {

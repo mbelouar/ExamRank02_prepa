@@ -1,4 +1,5 @@
 #include <stdlib.h>
+// #include <stdio.h>
 
 char		**ft_split(char *str)
 {
@@ -34,13 +35,12 @@ char		**ft_split(char *str)
 	return (split);
 }
 
-#include <stdio.h>
 
 int		main()
 {
 	char **arr;
 
-	char *phrase = "   Hello,   Flavio\t Wuensche!  ";
+	char *phrase = "   Hello,   Flavio\t    Wuensche !  ";
 	arr = ft_split(phrase);
 	printf("%s\n", arr[0]);
 	printf("%s\n", arr[1]);

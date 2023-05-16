@@ -22,14 +22,17 @@ void    ft_capitalizer(char *str)
 
 int main(int ac, char **av)
 {
-    if (ac == 2)
+    if (ac < 2)
+        write(1, "\n", 1);
+    else
     {
         int i = 1;
         while (i < ac)
         {
             ft_capitalizer(av[i]);
+            write(1, "\n", 1);
             i++;
         }
     }
-    write(1, "\n", 1);
+    return (0);
 }

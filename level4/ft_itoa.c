@@ -3,8 +3,8 @@
 int ft_size(int n)
 {
     int i = 0;
-    
-    if (n < 0)
+
+    if (n <= 0)
         i++;
     while (n != 0)
     {
@@ -55,11 +55,4 @@ char    *ft_itoa(int nbr)
     ft_fill_str(nbr, str, size, stock_n);
     str[size] = '\0';
     return (str);
-}
-#include <stdio.h>
-#include <limits.h>
-
-int main()
-{
-    printf("%s", ft_itoa(012));
 }
